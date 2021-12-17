@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-
+//This shows the mvoes details.
+//called from the main menu, shows a list of moves for users to pick from to learn about
 struct MovesView: View {
     @StateObject private var movesChoiceStore : DataStore = DataStore(datas: movesData)
     @State private var selection: String? = nil
@@ -24,7 +25,7 @@ struct MovesView: View {
         
     }
 }
-
+//preview for the moves menu
 struct MovesView_Previews: PreviewProvider {
     static var previews: some View {
         MovesView()
