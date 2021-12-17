@@ -7,7 +7,8 @@
 
 
 import SwiftUI
-
+//This is loaded  by the main menu and naviatgation and is made to show users the definitions o holds
+// it load a JSON file that contains hold information
 struct holdsDetails: View {
     @StateObject private var holdsChoiceStore : DataStore = DataStore(datas: holdsData)
     let chosenList : Datas
@@ -25,7 +26,7 @@ struct holdsDetails: View {
         }
     }
 }
-
+//allows for preview for the holds view
 struct holdsDetails_Previews: PreviewProvider {
     static var previews: some View {
         holdsDetails(chosenList: holdsData[0])
