@@ -8,6 +8,8 @@
 import SwiftUI
 
 
+//Shows details of the moves, this has the contents for the JSON
+//Read in info and allows for the user to read what info that they want
 struct MovesDetails: View {
     @StateObject private var movesChoiceStore : DataStore = DataStore(datas: holdsData)
     let chosenList : Datas
@@ -25,7 +27,7 @@ struct MovesDetails: View {
         }
     }
 }
-
+//allows for preview of moves details
 struct MovesDetails_Previews: PreviewProvider {
     static var previews: some View {
         MovesDetails(chosenList: movesData[0])
