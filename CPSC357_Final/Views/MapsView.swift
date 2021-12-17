@@ -7,7 +7,9 @@
 
 import SwiftUI
 import MapKit
+//Shows the map view and information regarding all of the locations
 
+//Hangar 18 Orange View
 struct MapView0: View {
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 33.806_700, longitude: -117.868_850),
@@ -17,6 +19,7 @@ struct MapView0: View {
         Map(coordinateRegion: $region)
     }
 }
+//Sender 1
 struct MapView1: View {
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 33.729_3, longitude: -117.835_1),
@@ -26,6 +29,7 @@ struct MapView1: View {
         Map(coordinateRegion: $region)
     }
 }
+// Movement Gym
 struct MapView2: View {
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 33.700_9, longitude: -117.934_3),
@@ -35,6 +39,7 @@ struct MapView2: View {
         Map(coordinateRegion: $region)
     }
 }
+//Rockreation Sport Climbing Center
 struct MapView3: View {
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 33.679_330, longitude: -117.911_460),
@@ -44,6 +49,7 @@ struct MapView3: View {
         Map(coordinateRegion: $region)
     }
 }
+//Aesthetic Climbing Gym
 struct MapView4: View {
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 33.664_980, longitude: -117.663_860),
@@ -53,15 +59,8 @@ struct MapView4: View {
         Map(coordinateRegion: $region)
     }
 }
-struct MapView5: View {
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 33.664_980, longitude: -117.663_860),
-        span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
-    )
-    var body: some View {
-        Map(coordinateRegion: $region)
-    }
-}
+
+//This calls the map view depending on the slection from the picker then displays the info for the location
 struct MapsView: View {
     var locationNum: [Int] = [1,2,3,4,5]
     var Locationnames = ["Hangar 18 Orange", "Sender 1", "Movement","Rockreation Sport Climbing Center","Aesthetic Climbing Gym"]
@@ -103,7 +102,7 @@ struct MapsView: View {
         }
     }
 }
-
+//allows for map preview
 struct MapsView_Previews: PreviewProvider {
     static var previews: some View {
         MapsView()
