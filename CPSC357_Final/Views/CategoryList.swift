@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+//Category list view is called by the main menu and navigation from view to view
 struct CategoryList: View {
     @StateObject private var menuChoiceStore : DataStore = DataStore(datas: rootData)
     let chosenList : Datas
