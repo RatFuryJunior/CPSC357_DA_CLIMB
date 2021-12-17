@@ -6,7 +6,11 @@
 //
 
 import SwiftUI
-
+//called at start to show the main menu:
+//contains Holds
+//contains maps
+//contains view for the moves
+//contains references
 struct MenuView: View {
     @StateObject private var menuChoiceStore : DataStore = DataStore(datas: rootData)
     @StateObject var referenceStore : DataStore = DataStore(datas: referenceData)
@@ -15,6 +19,7 @@ struct MenuView: View {
         VStack{
             NavigationView{
                 List {
+                    //displays the holds menu
                     NavigationLink(destination: HoldsView()){
                         HStack {
                             Image("MainMenuHolds")
@@ -28,7 +33,7 @@ struct MenuView: View {
                        
                     }
                     .navigationTitle(Text("Da Menu"))
-                    //.navigationBarBackButtonHidden(true)
+                    //displays the moves menu
                     
                     NavigationLink(destination: MovesView()){
                         HStack {
@@ -40,7 +45,7 @@ struct MenuView: View {
                                 //Text(datas.imageName).fontWeight(.light)
                         }
                     }
-                    //.navigationTitle(Text("Da Climb"))
+                    //displays maps view
                     NavigationLink(destination: MapsView()){
                         HStack {
                             Image("MainMenuMap")
@@ -51,7 +56,7 @@ struct MenuView: View {
                                 //Text(datas.imageName).fontWeight(.light)
                         }
                     }
-                    //.navigationTitle(Text("Da Climb"))
+                    //for reference view
                     NavigationLink(destination: ReferenceView(chosenList: referenceData[0])){
                         HStack {
                             Image("MainMenuReferences")
@@ -72,7 +77,7 @@ struct MenuView: View {
         }
     }
 }
-
+//allows for main menu preview
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
         MenuView()
