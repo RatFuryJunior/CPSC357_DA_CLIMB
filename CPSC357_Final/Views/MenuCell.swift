@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+//displays a single cell on the main menu, allows for user choice from the main menu
 struct MenuCell: View {
     var datas: Datas
     
@@ -23,7 +23,7 @@ struct MenuCell: View {
         }
     }
 }
-
+// allows for preview of one cell
 struct MenuCell_Previews: PreviewProvider {
     static var previews: some View {
         MenuCell(datas: rootData[0])
